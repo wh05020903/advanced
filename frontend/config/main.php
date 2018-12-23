@@ -36,14 +36,21 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false,
+            'showScriptName' => false, 
+            'enableStrictParsing' => false,
+            'suffix' => '.html',
             'rules' => [
+                '<controller:\w+>/<id:\d+>' => '<controller>/view',
             ],
         ],
-        */
+  //      'urlManager' => [
+  //          'enablePrettyUrl' => true,
+  //          'showScriptName' => false,
+  //          'rules' => [
+  //          ],
+  //      ],
     ],
     'params' => $params,
 ];
